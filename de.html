@@ -9,22 +9,26 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav>
+  <nav aria-label="Hauptnavigation">
     <div class="wrap">
-      <a class="brand" href="#top"><i></i> VAIRRIGATION</a>
-      <ul>
-        <li><a href="#product">Produkt</a></li>
-        <li><a href="#water">Hofwasser</a></li>
-        <li><a href="#trial">Praxistest</a></li>
-        <li><a href="#grants">Förderung</a></li>
-      </ul>
-      <div class="nav-right">
-        <div class="lang"><a href="index.html">EN</a><a class="on" href="de.html">DE</a></div>
-        <a class="btn" href="#trial">Ein Feld testen</a>
+      <a class="brand" href="#top"><i aria-hidden="true"></i> VAIRRIGATION</a>
+      <button class="menu-toggle" type="button" aria-label="Navigationsmenü umschalten" aria-expanded="false" aria-controls="primary-navigation">Menü</button>
+      <div class="nav-menu" id="primary-navigation">
+        <ul>
+          <li><a href="#product">Produkt</a></li>
+          <li><a href="#water">Hofwasser</a></li>
+          <li><a href="#trial">Praxistest</a></li>
+          <li><a href="#grants">Förderung</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="lang"><a href="index.html">EN</a><a class="on" href="de.html">DE</a></div>
+          <a class="btn" href="#trial">Ein Feld testen</a>
+        </div>
       </div>
     </div>
   </nav>
 
+  <main>
   <header class="hero" id="top">
     <div class="hero-bg" aria-hidden="true">
       <div class="hero-slide s1"></div>
@@ -109,18 +113,20 @@
           <div class="big">6 420 m³</div>
           <p style="color:var(--muted);font-size:14px">von 12 000 m³ Hofwasser</p>
           <div class="bar"><span></span></div>
-          <table>
-            <thead>
-              <tr><th>Feld</th><th>Wasser drauf</th><th>Aktion</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Feld 1</td><td>1 250 m³ · 12 mm</td><td class="tag go">Heute Nacht wässern</td></tr>
-              <tr><td>Feld 2</td><td>2 340 m³ · 22 mm</td><td class="tag wait">Warten — Regen</td></tr>
-              <tr><td>Feld 3</td><td>630 m³ · 6 mm</td><td class="tag go">Überleben 6 mm</td></tr>
-              <tr><td>Feld 4</td><td>210 m³ · 2 mm</td><td class="tag alert">Braucht Wasser</td></tr>
-              <tr><td>Feld 5</td><td>1 150 m³ · 11 mm</td><td class="tag wait">Stopp — Anteil weg</td></tr>
-            </tbody>
-          </table>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Feld</th><th>Wasser drauf</th><th>Aktion</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Feld 1</td><td>1 250 m³ · 12 mm</td><td class="tag go">Heute Nacht wässern</td></tr>
+                <tr><td>Feld 2</td><td>2 340 m³ · 22 mm</td><td class="tag wait">Warten — Regen</td></tr>
+                <tr><td>Feld 3</td><td>630 m³ · 6 mm</td><td class="tag go">Überleben 6 mm</td></tr>
+                <tr><td>Feld 4</td><td>210 m³ · 2 mm</td><td class="tag alert">Braucht Wasser</td></tr>
+                <tr><td>Feld 5</td><td>1 150 m³ · 11 mm</td><td class="tag wait">Stopp — Anteil weg</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -158,6 +164,7 @@
       <a class="btn" href="mailto:hello@vairrigation.com">Über einen Test sprechen</a>
     </div>
   </section>
+  </main>
 
   <div class="wrap">
     <footer>
@@ -165,5 +172,6 @@
       <span>Vom Satellitenbild zur Wassergabe</span>
     </footer>
   </div>
+  <script src="nav.js"></script>
 </body>
 </html>
