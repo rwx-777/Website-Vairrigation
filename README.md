@@ -188,6 +188,25 @@ A production version would need validated agronomic models, reliable field and w
 
 The website includes semantic HTML, descriptive image alt text, responsive layouts, and a `prefers-reduced-motion` fallback for the animated hero section.
 
+### Accessible mobile navigation
+
+The English and German pages now include a shared, keyboard-accessible mobile navigation:
+
+- A visible menu toggle button on small screens with `aria-label`, `aria-expanded`, and `aria-controls`
+- A collapsible navigation container shared by links, language switcher, and CTA
+- Automatic close behavior when a nav link is selected, when pressing `Escape`, or when clicking outside the nav
+- Shared focus-visible styles for links and buttons
+
+To test locally:
+
+1. Start a local server (`python3 -m http.server 8000`) and open `http://localhost:8000`.
+2. Reduce the viewport width below `900px`.
+3. Open and close the menu using:
+   - Mouse/touch
+   - Keyboard (`Tab` to focus the toggle, then `Enter` or `Space`)
+   - `Escape` to close
+4. Repeat on both `index.html` and `de.html`.
+
 For the best experience, use a current version of a modern browser such as Chrome, Edge, Firefox, or Safari.
 
 ## Contributing
