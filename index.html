@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vairrigation — Water where the crop still pays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top"><i></i> VAIRRIGATION</a>
+      <ul>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#water">Farm water</a></li>
+        <li><a href="#trial">Trial</a></li>
+        <li><a href="#grants">Grants</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang"><a class="on" href="index.html">EN</a><a href="de.html">DE</a></div>
+        <a class="btn" href="#trial">Test one field</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-slide s1"></div>
+      <div class="hero-slide s2"></div>
+      <div class="hero-slide s3"></div>
+    </div>
+    <div class="wrap">
+      <p class="kicker">Smart farming · Agritech · Water</p>
+      <h1>Where to put the water you still have</h1>
+      <p>The farm sets the monthly water. The system plans millimetres per field. You only hear if a rule breaks.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#trial">Start a one-month test</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="wrap" style="display:contents">
+      <div><strong>1 field</strong><span>is enough for the first month</span></div>
+      <div><strong>15 min</strong><span>twice a week from the farmer</span></div>
+      <div><strong>Your cap</strong><span>the month’s water is never a surprise</span></div>
+    </div>
+  </div>
+
+  <section id="product">
+    <div class="wrap split">
+      <img src="images/uNB9n.jpg" alt="Centre pivot watering a crop" />
+      <div>
+        <h2>The machine stays. The plan gets smarter.</h2>
+        <p class="lede">Vairrigation watches the crop from space and the weather on the ground, then says how many millimetres each field still needs — inside the water you are allowed this month.</p>
+        <ul class="list">
+          <li><span class="num">1</span><div><strong>See the fields</strong><br />A map of Field 1, Field 2, Field 3 — not a lab console.</div></li>
+          <li><span class="num">2</span><div><strong>See the water</strong><br />Cubic metres left this month. Millimetres already put on.</div></li>
+          <li><span class="num">3</span><div><strong>See tonight</strong><br />Water, hold for rain, survival only, or stop — this field used its share.</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Works with what you already own</h2>
+      <p class="lede">A circling machine, a hose reel, or pipes at the tree. We do not sell steel.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="images/rwv1X.jpg" alt="Circling watering machine" />
+          <div>
+            <h3>Open crops</h3>
+            <p>Wheat, maize, potatoes under a circling machine. Different millimetres on different parts of the circle when the machine can do that.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/AExFt.jpg" alt="Hose reel in a cereal field" />
+          <div>
+            <h3>Rectangles and reels</h3>
+            <p>The German default. One depth for the run, planned from the same water tank and the same crop need.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/iKPam.jpg" alt="Circular irrigated field" />
+          <div>
+            <h3>Trees and vines</h3>
+            <p>Fruit and dates on drip. The map is rows, not a circle. The question is the same: where does tonight’s water still pay.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dash" id="water">
+    <div class="wrap">
+      <h2>Farm water on one screen</h2>
+      <p class="lede">What a manager should answer before breakfast: how much water the month still holds, what each field already drank, what to do tonight.</p>
+      <div class="dash-frame">
+        <div class="dash-map">
+          <span class="pin" style="top:22%;left:28%">Field 1</span>
+          <span class="pin" style="top:30%;left:58%">Field 2</span>
+          <span class="pin" style="top:58%;left:40%">Field 3</span>
+        </div>
+        <div class="dash-side">
+          <h3>Water left this month</h3>
+          <div class="big">6 420 m³</div>
+          <p style="color:var(--muted);font-size:14px">of 12 000 m³ farm water</p>
+          <div class="bar"><span></span></div>
+          <table>
+            <thead>
+              <tr><th>Field</th><th>Water put on</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Field 1</td><td>1 250 m³ · 12 mm</td><td class="tag go">Water tonight</td></tr>
+              <tr><td>Field 2</td><td>2 340 m³ · 22 mm</td><td class="tag wait">Hold — rain</td></tr>
+              <tr><td>Field 3</td><td>630 m³ · 6 mm</td><td class="tag go">Survival 6 mm</td></tr>
+              <tr><td>Field 4</td><td>210 m³ · 2 mm</td><td class="tag alert">Needs water</td></tr>
+              <tr><td>Field 5</td><td>1 150 m³ · 11 mm</td><td class="tag wait">Stop — share used</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trial">
+    <div class="wrap">
+      <h2>How a farm tests it</h2>
+      <p class="lede">One field you already water. One month. Then you keep it, change it, or stop. No new pipes.</p>
+      <div class="steps">
+        <div class="step"><span>Week 0</span><h3>Walk the field</h3><p>Crop, sowing date, how you water now, how much water the month allows.</p></div>
+        <div class="step"><span>Week 1–2</span><h3>Watch</h3><p>Two short notes a week: water left, water already on, plan for the next two nights.</p></div>
+        <div class="step"><span>Week 3–4</span><h3>Correct</h3><p>If the plan is wrong twice, we change the numbers with you on the phone.</p></div>
+        <div class="step"><span>Month end</span><h3>One page</h3><p>Water used. Water still in the month. Your call.</p></div>
+      </div>
+      <p class="lede" style="margin-top:28px">Success is the same crop with less water — or the same water with fewer surprises — without emptying the month before day 20.</p>
+    </div>
+  </section>
+
+  <section id="grants">
+    <div class="wrap split">
+      <div>
+        <h2>Part of the cost can be covered. Not the whole bill.</h2>
+        <p class="lede">Europe pays farmers, not software firms. You apply in your country. A meter and a likely water saving are usually required. In Germany often 20–40% of eligible kit.</p>
+        <a class="btn ghost" href="mailto:hello@vairrigation.com">Ask for the one-pager</a>
+      </div>
+      <img src="images/AExFt.jpg" alt="Irrigation reel in Germany" />
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Bring one field.</h2>
+      <p class="lede">Fifteen minutes, twice a week. You can ignore any night. We still want to hear that you did.</p>
+      <a class="btn" href="mailto:hello@vairrigation.com">Talk about a test</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer>
+      <span>Vairrigation · Farm water</span>
+      <span>From satelite to smart Irrigation</span>
+    </footer>
+  </div>
+</body>
+</html>
