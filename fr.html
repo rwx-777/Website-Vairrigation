@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vairrigation — Plus de récolte par goutte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top"><i></i> VAIRRIGATION</a>
+      <ul>
+        <li><a href="#product">Produit</a></li>
+        <li><a href="#water">Eau de la ferme</a></li>
+        <li><a href="#trial">Essai</a></li>
+        <li><a href="#grants">Aides</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang"><a href="index.html">EN</a><a href="de.html">DE</a><a class="on" href="fr.html">FR</a></div>
+        <a class="btn" href="#trial">Tester un champ</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-slide s1"></div>
+      <div class="hero-slide s2"></div>
+      <div class="hero-slide s3"></div>
+    </div>
+    <div class="wrap">
+      <p class="kicker">Agriculture intelligente · Agritech · Eau</p>
+      <h1>Plus de récolte par goutte</h1>
+      <p>L’exploitation fixe l’eau du mois. Le système planifie les millimètres par champ. Vous n’entendez que si une règle casse.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#trial">Démarrer un essai d’un mois</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="wrap" style="display:contents">
+      <div><strong>1 champ</strong><span>suffit pour le premier mois</span></div>
+      <div><strong>15 min</strong><span>deux fois par semaine</span></div>
+      <div><strong>Votre plafond</strong><span>l’eau du mois n’est jamais une surprise</span></div>
+    </div>
+  </div>
+
+  <section id="product">
+    <div class="wrap split">
+      <img src="images/uNB9n.jpg" alt="Pivot sur le champ" />
+      <div>
+        <h2>La machine reste. Le plan devient plus malin.</h2>
+        <p class="lede">Vairrigation voit la culture depuis l’espace et la météo au sol, puis dit combien de millimètres chaque champ demande — dans l’eau autorisée ce mois-ci.</p>
+        <ul class="list">
+          <li><span class="num">1</span><div><strong>Besoin en eau</strong><br />Carte des champs. Pas un laboratoire.</div></li>
+          <li><span class="num">2</span><div><strong>Stock d’eau</strong><br />Mètres cubes encore dans le mois. Millimètres déjà apportés.</div></li>
+          <li><span class="num">3</span><div><strong>Cette nuit</strong><br />Arroser, attendre, survivre — ou stop.</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Ça marche avec ce que vous avez déjà</h2>
+      <p class="lede">Pivot, enrouleur ou goutte-à-goutte. La technique que vous avez déjà reste. Pas de nouvelle conduite, pas de nouvel équipement.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="images/rwv1X.jpg" alt="Pivot" />
+          <div>
+            <h3>Cultures ouvertes</h3>
+            <p>Blé, maïs, pommes de terre sous le pivot. Des millimètres différents sur le cercle.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/AExFt.jpg" alt="Enrouleur" />
+          <div>
+            <h3>Enrouleur et rectangles</h3>
+            <p>Un passage, une dose. Planifiée à partir de la même eau du mois.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/iKPam.jpg" alt="Vignes" />
+          <div>
+            <h3>Arbres et vignes</h3>
+            <p>Fruits et dattes au goutte-à-goutte. La carte, ce sont des rangs, pas un cercle.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dash" id="water">
+    <div class="wrap">
+      <h2>L’eau de la ferme sur un écran</h2>
+      <p class="lede">Ce qui doit être clair avant le petit-déjeuner : combien d’eau le mois tient encore, ce que chaque champ a déjà bu, ce qui se passe cette nuit.</p>
+      <div class="dash-frame">
+        <div class="dash-map">        </div>
+        <div class="dash-side">
+          <h3>Eau restante ce mois</h3>
+          <div class="big">6 420 m³</div>
+          <p style="color:var(--muted);font-size:14px">sur 12 000 m³ d’eau de ferme</p>
+          <div class="bar"><span></span></div>
+          <table>
+            <thead>
+              <tr><th>Champ</th><th>Eau apportée</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Champ 1</td><td>1 250 m³ · 12 mm</td><td class="tag go">Arroser cette nuit</td></tr>
+              <tr><td>Champ 2</td><td>2 340 m³ · 22 mm</td><td class="tag wait">Attendre — pluie</td></tr>
+              <tr><td>Champ 3</td><td>630 m³ · 6 mm</td><td class="tag go">Survivre 6 mm</td></tr>
+              <tr><td>Champ 4</td><td>210 m³ · 2 mm</td><td class="tag alert">Besoin d’eau</td></tr>
+              <tr><td>Champ 5</td><td>1 150 m³ · 11 mm</td><td class="tag wait">Stop — part épuisée</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trial">
+    <div class="wrap">
+      <h2>Comment une ferme teste</h2>
+      <p class="lede">Un champ que vous arrosez déjà. Un mois. Puis garder, changer ou arrêter. Pas de nouvelle conduite.</p>
+      <div class="steps">
+        <div class="step"><span>Semaine 0</span><h3>Sur la parcelle</h3><p>Culture, semis, doses déjà données, eau autorisée ce mois.</p></div>
+        <div class="step"><span>Sem. 1–2</span><h3>Regarder</h3><p>Deux courts messages : eau restante, eau apportée, plan pour deux nuits.</p></div>
+        <div class="step"><span>Sem. 3–4</span><h3>Corriger</h3><p>Deux fois faux — on change les chiffres avec vous.</p></div>
+        <div class="step"><span>Fin du mois</span><h3>Une page</h3><p>Eau consommée. Eau encore dans le mois. Votre jugement.</p></div>
+      </div>
+      <p class="lede" style="margin-top:28px">Réussir, c’est la même récolte avec moins d’eau — ou une culture plus saine et plus de rendement avec l’eau que vous avez déjà.</p>
+    </div>
+  </section>
+
+  <section id="grants">
+    <div class="wrap split">
+      <div>
+        <h2>Demandez à votre État. Beaucoup paient une part.</h2>
+        <p class="lede">Des aides à l’économie d’eau existent dans la plupart des pays. Vous déposez la demande à votre nom. On exige souvent un compteur et la preuve que moins d’eau est allée au champ. Nous aidons pour le dossier. L’aide n’est jamais toute la facture.</p>
+        <a class="btn ghost" href="mailto:hello@vairrigation.com">Demander la fiche</a>
+      </div>
+      <img src="images/AExFt.jpg" alt="Enrouleur" />
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Donnez sa chance à un champ.</h2>
+      <p class="lede">Moins d’eau. Des plantes plus saines. Plus de rendement. Faites confiance au système — et à la saison qui vient.</p>
+      <a class="btn" href="mailto:hello@vairrigation.com">Parler d’un essai</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer>
+      <span>Vairrigation · Eau de la ferme</span>
+      <span>Plus de récolte par goutte</span>
+    </footer>
+  </div>
+</body>
+</html>
