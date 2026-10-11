@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vairrigation · Farm water</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body class="dash-app">
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html"><i></i> VAIRRIGATION</a>
+      <ul>
+        <li><a href="index.html">Site</a></li>
+        <li><a class="on" href="dashboard.html">Farm water</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="btn" href="mailto:hello@vairrigation.com">Talk about a test</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="farm-bar">
+    <div>
+      <h1 id="farm-name">Mubuyu Farm</h1>
+      <p id="farm-meta">Demo · five fields · month water</p>
+    </div>
+    <form class="search" id="search-form">
+      <input id="q" type="search" placeholder="Search a farm or place" />
+      <button class="btn" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="layout">
+    <div class="map-wrap"><div id="map"></div></div>
+    <div class="side">
+      <div class="meter">
+        <h3>Water left this month</h3>
+        <div class="big" id="left">6 420 m³</div>
+        <p style="color:var(--muted);font-size:14px" id="cap">of 12 000 m³ farm water</p>
+        <div class="bar"><span id="bar"></span></div>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Water put on</th><th>Action</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const fields = [
+      { name: "Field 1", water: "1 250 m³ · 12 mm", action: "Water tonight", cls: "go", lat: -17.82, lng: 25.86 },
+      { name: "Field 2", water: "2 340 m³ · 22 mm", action: "Wait — rain", cls: "wait", lat: -17.825, lng: 25.87 },
+      { name: "Field 3", water: "630 m³ · 6 mm", action: "Survive 6 mm", cls: "go", lat: -17.83, lng: 25.855 },
+      { name: "Field 4", water: "210 m³ · 2 mm", action: "Needs water", cls: "alert", lat: -17.815, lng: 25.85 },
+      { name: "Field 5", water: "1 150 m³ · 11 mm", action: "Stop — share gone", cls: "wait", lat: -17.835, lng: 25.865 }
+    ];
+    const map = L.map("map").setView([-17.825, 25.86], 14);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+      attribution: "Tiles © Esri"
+    }).addTo(map);
+    const colors = { go: "#0f7a5a", wait: "#5c6b63", alert: "#c47a12" };
+    fields.forEach(f => {
+      L.circle([f.lat, f.lng], { radius: 180, color: colors[f.cls], fillColor: colors[f.cls], fillOpacity: 0.45 })
+        .addTo(map).bindPopup(f.name + " — " + f.action);
+    });
+    const rows = document.getElementById("rows");
+    fields.forEach(f => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + f.name + "</td><td>" + f.water + "</td><td class='tag " + f.cls + "'>" + f.action + "</td>";
+      rows.appendChild(tr);
+    });
+    document.getElementById("search-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const q = document.getElementById("q").value.trim();
+      if (!q) return;
+      const r = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(q));
+      const data = await r.json();
+      if (data[0]) map.setView([+data[0].lat, +data[0].lon], 13);
+    });
+  </script>
+</body>
+</html>
